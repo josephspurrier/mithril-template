@@ -45,10 +45,13 @@ npm start
 # Username: jsmith@example.com
 # Password: password
 
-# Run Cypress.
+# Run Cypress tests in the CLI.
+npm test
+
+# Run Cypress tests in the UI.
 npm run cypress
 
-# Run Storybook.
+# Start the Storybook UI.
 npm run storybook
 
 # Lint the code.
