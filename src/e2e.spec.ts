@@ -36,7 +36,7 @@ describe('test the full application', () => {
       .should('have.value', 'jsmith@example.com');
     cy.get('[data-cy=password]')
       .type('password')
-      .should('have.value', 'passowrd');
+      .should('have.value', 'password');
     cy.get('[data-cy=submit]').click();
     cy.contains('Login successful.');
   });
