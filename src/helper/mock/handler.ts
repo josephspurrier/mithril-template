@@ -31,7 +31,10 @@ export const handlers = [
     (req, res, ctx): AsyncResponseResolverReturnType<MockedResponse> => {
       if (
         JSON.stringify(req.body) ===
-        JSON.stringify({ email: 'a@a.com', password: 'a' } as UserLogin)
+        JSON.stringify({
+          email: 'jsmith@example.com',
+          password: 'password',
+        } as UserLogin)
       ) {
         return res(
           ctx.status(200),
