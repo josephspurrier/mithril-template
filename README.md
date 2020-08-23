@@ -41,7 +41,7 @@ npm install
 # Start the web server. Your browser will open to: http://locahost:8080.
 npm start
 
-# To login, use:
+# You don't need to use the Register page before logging in. To login, use:
 # Username: jsmith@example.com
 # Password: password
 
