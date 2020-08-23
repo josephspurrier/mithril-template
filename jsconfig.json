@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "CommonJS",
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "./",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ],
+            "~/*": [
+                "*"
+            ],
+        },
+        "checkJs": true,
+    },
+    "include": [
+        "src/**/*",
+        ".storybook/**/*",
+        ".cypress/**/*",
+        "node_modules/cypress/**/*",
+    ]
+}

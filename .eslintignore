@@ -1,0 +1,9 @@
+# Include Cypress.
+!/.cypress
+
+# Include Storybook.
+# https://github.com/eslint/eslint/issues/8429
+!/.storybook
+
+# Skip Storybook generated files.
+.storybook/*-entry.js
