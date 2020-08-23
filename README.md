@@ -41,6 +41,10 @@ npm install
 # Start the web server. Your browser will open to: http://locahost:8080.
 npm start
 
+# To login, use:
+# Username: jsmith@example.com
+# Password: password
+
 # Run Cypress.
 npm run cypress
 
