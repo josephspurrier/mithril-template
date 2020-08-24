@@ -20,6 +20,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: resolve(__dirname, 'dist', 'index.html'),
       title: 'mithril-template',
+      favicon: resolve(__dirname, 'static', 'favicon.ico'),
     }),
     new MiniCssExtractPlugin({
       filename: 'static/[name].[contenthash].css',

@@ -82,6 +82,10 @@ Cypress provides an easy-to-use end to end testing framework that launches a bro
 
 ESLint and Prettier will work together to autoformat your code on save and suggest where you can improve your code (.estlintignore, .estlintrc.js, .prettierrc). It will work together with the Visual Studio ESLint extension as well. You will get a notification in VS Code when you first open the project asking if you want to allow the ESLint application to run from the node_modules folder - you should allow it so it can run properly.
 
+## Favicon
+
+The favicon was generated from the gracious [favicon.io](https://favicon.io/favicon-generator/?t=m&ff=Leckerli+One&fs=110&fc=%23FFF&b=rounded&bc=%2300d1b2).
+
 ## Mithril
 
 Mithril is a fast and small framework that is easy to learn and provides routing and XHR utilities out of the box. You can use either HyperScript or JSX in this template.
