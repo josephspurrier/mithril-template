@@ -27,9 +27,6 @@ m.route(document.body, '/', {
     },
     render: () => m(DashboardLayout, m(NotepadPage)),
   },
-  '/workspace': {
-    onmatch: () => m.route.set('/workspace/all'),
-  },
   '/login': {
     onmatch: () => {
       if (isLoggedIn()) m.route.set('/');
