@@ -1,4 +1,4 @@
-# mithril-template
+# mithril-template ![Logo](https://user-images.githubusercontent.com/2394539/91363092-d0751c00-e7c9-11ea-87da-e34cb58af223.png)
 
 **This repository is a template so you can fork it to create your own applications from it.**
 
