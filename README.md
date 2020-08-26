@@ -118,3 +118,17 @@ If you open this project in Visual Studio Code, you will get:
 ## webpack
 
 When you run `npm start`, webpack will provide linting via ESLint and live reloading (webpack.config.js).
+
+# Screenshots
+
+Login screen.
+
+![Login](https://user-images.githubusercontent.com/2394539/91362446-817ab700-e7c8-11ea-9078-c54879dcfe00.png)
+
+Welcome screen.
+
+![Welcome](https://user-images.githubusercontent.com/2394539/91362572-c69ee900-e7c8-11ea-80fc-2b8e993b449f.png)
+
+Notepad screen.
+
+![Notepad](https://user-images.githubusercontent.com/2394539/91362680-fea62c00-e7c8-11ea-9697-b291eb9c478e.png)
