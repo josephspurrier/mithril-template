@@ -106,8 +106,8 @@ This service worker will intercept your API calls so you don't need a back-end w
 
 Storybook is a great way to build and test UI components in isolation:
 
-- .storybook/main.js references setting from your main webpack.config.js file, sets the type of file that is considered stories (any file that ends in .stories.js - it can also end in ts, jsx, or tsx extension).
-- .storybook/preview.js enables the console addon, includes the fontawesome icons, and includes the index.scss so you don't have to include it in every file. It also turns on the Mock Service Worker so all API calls can be intercepted and then returned data.
+- **.storybook/main.js** - references setting from your main webpack.config.js file, sets the type of file that is considered stories (any file that ends in .stories.js - it can also end in ts, jsx, or tsx extension).
+- **.storybook/preview.js** - enables the console addon, includes the fontawesome icons, and includes the index.scss so you don't have to include it in every file. It also turns on the Mock Service Worker so all API calls can be intercepted and then returned data.
 
 There are a lot of storybooks already included so take a look at how you can use the Controls addon with Mithril in the new Storybook v6 release.
 
@@ -122,6 +122,14 @@ If you open this project in Visual Studio Code, you will get:
 - extension recommendations for ESLint (.vscode/extensions.json)
 - settings configured for ESLint linting and prettier auto-corrections (.vscode/settings.json)
 - TypeScript code snippets for Mithril and arrow functions (.vscode/typescript.code-snippets)
+
+These code snippets are included - just start typing and they should be in the auto-complete menu. A few of them support tabbing through the various fields:
+
+- **mithril-closure** - Creates a closure component in Mithril.
+- **mithril-storybook** - Creates a storybook component in Mithril.
+- **arrow** - Creates an arrow function.
+- **onclick** - Creates an onclick with an arrow function.
+- **log** - Creates a console.log() statement.
 
 ## webpack
 

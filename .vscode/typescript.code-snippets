@@ -1,12 +1,12 @@
 {
     "Mithril Closure": {
         "prefix": "mithril-closure",
-        "body": "import m from \"mithril\";\r\n\r\nexport const $1: m.ClosureComponent = () => {\r\n  return {\r\n    view: () => $2m(\"div\", \"Context\"),\r\n  };\r\n};\r\n",
+        "body": "import m from 'mithril';\r\n\r\nexport const $1: m.ClosureComponent = () => {\r\n  return {\r\n    view: () => $2m('div', 'Context'),\r\n  };\r\n};\r\n",
         "description": "Creates a closure component in Mithril.",
     },
     "Mithril Storybook": {
         "prefix": "mithril-storybook",
-        "body": "import m from \"mithril\";\r\nimport { $1 } from \"@\/component\/$2\";\r\n\r\nexport default {\r\n  title: \"Component\/$3\",\r\n  component: $1,\r\n};\r\n\r\nexport const $4: m.ClosureComponent = () => ({\r\n  view: () => m($1),\r\n});\r\n",
+        "body": "import m from 'mithril';\r\nimport { $1 } from '@\/component\/$2';\r\n\r\nexport default {\r\n  title: 'Component\/$3',\r\n  component: $1,\r\n};\r\n\r\nexport const $4: m.ClosureComponent = () => ({\r\n  view: () => m($1),\r\n});\r\n",
         "description": "Creates a storybook component in Mithril.",
     },
     "Arrow Function": {
