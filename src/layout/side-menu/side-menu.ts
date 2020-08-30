@@ -1,13 +1,13 @@
 import m from 'mithril';
 import '@/layout/side-menu/side-menu.scss';
-import styles from '@/layout/side-menu/side-menu.scss';
+import style from '@/layout/side-menu/side-menu.scss';
 
 // https://bulma.io/documentation/components/menu/
 
 export const SideMenu: m.ClosureComponent = () => {
   return {
     view: () =>
-      m('div', { class: styles.local }, [
+      m('div', { class: style.local }, [
         m('aside', { class: 'menu aside' }, [
           m('p', { class: 'menu-label' }, 'Authenticated'),
           m('ul', { class: 'menu-list' }, [
