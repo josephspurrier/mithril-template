@@ -3,6 +3,7 @@
     // General settings
     // 
     "editor.formatOnSave": true,
+    "typescript.preferences.importModuleSpecifier": "non-relative",
     //
     // ESlint
     //
