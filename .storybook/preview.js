@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import '@storybook/addon-console';
 import '~/node_modules/@fortawesome/fontawesome-free/js/all.js';
-import '@/index.scss';
+import '@/index.global.scss';
 
 export const parameters = {
   controls: { expanded: false, hideNoControlsWarning: true },
