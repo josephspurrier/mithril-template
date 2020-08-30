@@ -1,5 +1,5 @@
 import m from 'mithril';
-import { Nav } from './nav';
+import { Nav } from '@/layout/nav/nav';
 
 export default {
   title: 'Component/Nav',

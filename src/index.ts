@@ -8,9 +8,9 @@ import { HomePage } from '@/feature/home/home';
 import { NotepadPage } from '@/feature/notepad/notepad';
 import { ErrorPage } from '@/feature/error/error';
 import { isLoggedIn } from '@/helper/cookiestore';
-import { setup } from './helper/mock/browser';
+import { setup } from '@/helper/mock/browser';
 import '~/node_modules/@fortawesome/fontawesome-free/js/all.js';
-import './index.scss';
+import '@/index.scss';
 
 m.route.prefix = '';
 

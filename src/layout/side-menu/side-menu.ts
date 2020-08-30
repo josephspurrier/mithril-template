@@ -1,5 +1,5 @@
 import m from 'mithril';
-import './side-menu.scss';
+import '@/layout/side-menu/side-menu.scss';
 
 // https://bulma.io/documentation/components/menu/
 

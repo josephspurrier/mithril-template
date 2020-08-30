@@ -1,5 +1,5 @@
 import m from 'mithril';
-import { Breadcrumb } from './breadcrumb';
+import { Breadcrumb } from '@/component/breadcrumb/breadcrumb';
 
 export default {
   title: 'Component/Breadcrumb',

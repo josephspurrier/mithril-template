@@ -1,5 +1,5 @@
 import m from 'mithril';
-import { Input } from './input';
+import { Input } from '@/component/input/input';
 
 export default {
   title: 'Component/Input',

@@ -1,5 +1,5 @@
 import m from 'mithril';
-import { SideMenu } from './side-menu';
+import { SideMenu } from '@/layout/side-menu/side-menu';
 
 export default {
   title: 'Component/Side Menu',

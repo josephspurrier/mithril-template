@@ -1,5 +1,5 @@
 import m from 'mithril';
-import { MainLayout } from './main';
+import { MainLayout } from '@/layout/main';
 import { SimplePage } from '@/component/simple-page';
 
 export default {

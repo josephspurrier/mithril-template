@@ -1,6 +1,6 @@
 import m from 'mithril';
 import { action } from '@storybook/addon-actions';
-import { Block } from './block';
+import { Block } from '@/component/reference/block';
 
 export default {
   title: 'Example/Block',

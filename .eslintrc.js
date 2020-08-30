@@ -18,6 +18,13 @@ module.exports = {
     // Disable the rule for all files to allow for mixed js/ts.
     // https://github.com/typescript-eslint/typescript-eslint/blob/v3.9.1/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    // Don't allow relative imports. VSCode will also use absolute imports by default.
+    'no-restricted-imports': [
+      'error',
+      {
+        patterns: ['./*'],
+      },
+    ],
   },
   overrides: [
     {
