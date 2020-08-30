@@ -5,6 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 // Try the environment variable, otherwise use root.
 const ASSET_PATH = '/';
@@ -50,6 +51,11 @@ module.exports = {
       __VERSION__: JSON.stringify('1.0.0'),
       __MOCK_SERVER__: JSON.stringify(true),
     }),
+    new ForkTsCheckerWebpackPlugin({
+      eslint: {
+        files: './**/*.{ts,tsx,js,jsx}',
+      },
+    }),
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
@@ -82,15 +88,30 @@ module.exports = {
   module: {
     rules: [
       {
-        enforce: 'pre',
-        test: /\.js$/,
-        loader: 'source-map-loader',
-      },
-      {
-        enforce: 'pre',
-        test: /\.(js|jsx|ts|tsx)$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: '[name]__[local]__[hash:base64:5]',
+                mode: 'local',
+                /**
+                 * @param {string} resourcePath
+                 */
+                auto: (resourcePath) => !resourcePath.endsWith('.global.scss'),
+              },
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
       },
       {
         test: /\.(js|jsx|ts|tsx)$/,
@@ -102,23 +123,18 @@ module.exports = {
       },
       {
         test: /\.(ts|tsx)$/,
-        use: 'ts-loader',
         exclude: /node_modules/,
+        loader: 'ts-loader',
+        options: {
+          transpileOnly: true,
+          experimentalWatchApi: true,
+        },
       },
       {
-        test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-        ],
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'source-map-loader',
       },
     ],
   },

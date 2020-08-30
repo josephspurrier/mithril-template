@@ -3,6 +3,7 @@ import { Nav } from '@/layout/nav/nav';
 import { SideMenu } from '@/layout/side-menu/side-menu';
 import { Footer } from '@/layout/footer/footer';
 import { Flash } from '@/component/flash/flash';
+import style from '@/layout/footer/footer.scss';
 
 export const DashboardLayout = (): m.Component => {
   return {
@@ -10,11 +11,11 @@ export const DashboardLayout = (): m.Component => {
       m(
         'dashboard',
         {
-          class: 'container-for-footer',
+          class: style.containerForFooter,
         },
         [
           m(Nav),
-          m('div', { class: 'columns before-footer' }, [
+          m('div', { class: 'columns ' + style.beforeFooter }, [
             m('div', { class: 'column is-2 is-hidden-mobile mt-4 ml-4' }, [
               m(SideMenu),
             ]),

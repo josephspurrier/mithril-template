@@ -74,6 +74,14 @@ Babel will transform your code using the [@babel/preset-env](https://babeljs.io/
 
 Bulma is a front-end framework that provides you with styled components and CSS helpers out of the box. This template also uses [Font Awesome](https://fontawesome.com/).
 
+## SASS
+
+[SASS](https://sass-lang.com/documentation/syntax) with the extension (.scss) is supported for both globally scoped (affects entire application) and locally scoped (namespaced for just the web component). The plugin, [MiniCssExtractPlugin](https://webpack.js.org/plugins/mini-css-extract-plugin/), is used with [css-loader](https://webpack.js.org/loaders/css-loader/) and [sass-loader](https://webpack.js.org/loaders/sass-loader/). The css-loader is configured to use [CSS Modules](https://github.com/css-modules/css-modules).
+
+Any file that ends in `.global.scss` will be treated as global and applied to the entire application like standard CSS. You can reference it like this from a web component: `import '@/index.global.scss';`. All other `.scss` files will be treated as local which means they will have their class names converted to this format: `[name]__[local]__[hash:base64:5]`. You can see how they are referenced in [side-menu.ts](/src/layout/side-menu/side-menu.ts). You must reference the class names in your TypeScript files using an import or the styles won't apply because the names are namespaced in the CSS file. In these CSS files, you will need to wrap any global classes with `:global(.nameHere)`. You can see how this is done here: [side-menu.scss](src/layout/side-menu/side-menu.scss). If you don't wrap them, they will be namespaced and won't work as intended. It's recommended to use camelCase for the class names because dashes make it a little more difficult to reference. You can read more about global vs local scope [here](https://webpack.js.org/loaders/css-loader/#scope). If you have any trouble using it, you can easily view the CSS output to see if names are namespaced or not.
+
+To allow referencing CSS class names in TypeScript, there is a declaration.d.ts file that allows any class name to be used. It's in the `include` section of tsconfig.json file.
+
 ## Cypress
 
 Cypress provides an easy-to-use end to end testing framework that launches a browser to do testing on your application. It can run from the CLI, or you can open up the UI and watch the tests live. It makes it really easy to debug tests that are not working properly. The config is in the cypress.json file, the support files are in the .cypress/support folder, and the main spec is here: src/e2e.spec.ts.
@@ -117,7 +125,7 @@ If you open this project in Visual Studio Code, you will get:
 
 ## webpack
 
-When you run `npm start`, webpack will provide linting via ESLint and live reloading (webpack.config.js).
+When you run `npm start`, webpack will provide linting via ESLint and live reloading (webpack.config.js). To compile faster, this template uses the [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) that runs the TypeScript type checker on a separate process. ESLint is also run on a separate process. You'll notice the `transpileOnly: true` option is set on the `ts-loader` in the webpack.config.js and the `ForkTsCheckerWebpackPlugin` is a plugin that handles the type checking and ESLint.
 
 # Screenshots
 

@@ -1,10 +1,10 @@
-.css-menu-aside {
+.local {
     // Formatting for sidebar with icons.
-    .aside .icon:first-child {
+    :global(.aside) :global(.icon):first-child {
         margin-right: 0.5em;
     }
 
-    .aside a {
+    :global(.aside) a {
         align-items: center;
         display: flex;
     }

@@ -26,6 +26,7 @@
         "src/**/*",
         ".storybook/**/*",
         ".cypress/**/*",
+        "declaration.d.ts"
     ],
     "exclude": [
         "node_modules",
