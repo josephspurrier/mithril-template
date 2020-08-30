@@ -24,6 +24,7 @@
     ],
     //
     // File specific settings
+    //
     "[javascript]": {
         "editor.formatOnSave": false,
     },
@@ -36,4 +37,10 @@
     "[typescriptreact]": {
         "editor.formatOnSave": false,
     },
+    // 
+    // File extensions
+    //
+    "files.associations": {
+        "*.prettierrc": "json"
+    }
 }
