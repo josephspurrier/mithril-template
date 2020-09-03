@@ -96,11 +96,7 @@ module.exports = {
             options: {
               modules: {
                 localIdentName: '[name]__[local]__[hash:base64:5]',
-                mode: 'local',
-                /**
-                 * @param {string} resourcePath
-                 */
-                auto: (resourcePath) => !resourcePath.endsWith('.global.scss'),
+                mode: 'global',
               },
               sourceMap: true,
             },

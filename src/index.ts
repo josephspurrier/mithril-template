@@ -10,7 +10,7 @@ import { ErrorPage } from '@/feature/error/error';
 import { isLoggedIn } from '@/helper/cookiestore';
 import { setup } from '@/helper/mock/browser';
 import '~/node_modules/@fortawesome/fontawesome-free/js/all.js';
-import '@/index.global.scss';
+import '@/global.scss';
 
 m.route.prefix = '';
 
