@@ -9,6 +9,8 @@
     "build": "webpack -p",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint-fix": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
+    "stylelint": "stylelint 'src/**/*.{css,scss,json}'",
+    "stylelint-fix": "stylelint --fix 'src/**/*.{css,scss}'",
     "test": "cypress run",
     "test-debug": "DEBUG=cypress:* cypress run",
     "cypress": "cypress open",
@@ -64,6 +66,9 @@
     "eslint-plugin-mithril": "^0.2.0",
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.1.1",
+    "stylelint": "^13.7.0",
+    "stylelint-config-css-modules": "^2.2.0",
+    "stylelint-config-standard": "^20.0.0",
     "webpack-dev-server": "^3.11.0"
   }
 }

@@ -1,10 +1,10 @@
 // Support footer.
 :local(.containerForFooter) {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 :local(.beforeFooter) {
-    flex: 1;
+  flex: 1;
 }

@@ -1,35 +1,26 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "module": "CommonJS",
-        "esModuleInterop": true,
-        "baseUrl": "./",
-        "strict": true,
-        "paths": {
-            "@/*": [
-                "src/*"
-            ],
-            "~/*": [
-                "*"
-            ],
-        },
-        "outDir": "./dist/",
-        "jsx": "react",
-        "jsxFactory": "m",
-        "allowJs": true,
-        "checkJs": true,
-        "types": [
-            "cypress"
-        ]
+  "compilerOptions": {
+    "target": "es5",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "strict": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "~/*": ["*"]
     },
-    "include": [
-        "src/**/*",
-        ".storybook/**/*",
-        ".cypress/**/*",
-        "declaration.d.ts"
-    ],
-    "exclude": [
-        "node_modules",
-        ".storybook/static/mockServiceWorker.js",
-    ],
+    "outDir": "./dist/",
+    "jsx": "react",
+    "jsxFactory": "m",
+    "allowJs": true,
+    "checkJs": true,
+    "types": ["cypress"]
+  },
+  "include": [
+    "src/**/*",
+    ".storybook/**/*",
+    ".cypress/**/*",
+    "declaration.d.ts"
+  ],
+  "exclude": ["node_modules", ".storybook/static/mockServiceWorker.js"]
 }

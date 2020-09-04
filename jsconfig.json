@@ -1,23 +1,19 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "module": "CommonJS",
-        "allowSyntheticDefaultImports": true,
-        "baseUrl": "./",
-        "paths": {
-            "@/*": [
-                "src/*"
-            ],
-            "~/*": [
-                "*"
-            ],
-        },
-        "checkJs": true,
+  "compilerOptions": {
+    "target": "es5",
+    "module": "CommonJS",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "~/*": ["*"]
     },
-    "include": [
-        "src/**/*",
-        ".storybook/**/*",
-        ".cypress/**/*",
-        "node_modules/cypress/**/*",
-    ]
+    "checkJs": true
+  },
+  "include": [
+    "src/**/*",
+    ".storybook/**/*",
+    ".cypress/**/*",
+    "node_modules/cypress/**/*"
+  ]
 }
