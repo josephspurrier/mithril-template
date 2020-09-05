@@ -52,9 +52,13 @@ export const Note = (): m.Component<Attrs, State> => {
                   class: 'level-item',
                   title: 'Delete note',
                   onclick: function () {
-                    NoteStore.runDelete(attrs.id).then(() => {
-                      attrs.removeNote(attrs.id);
-                    });
+                    NoteStore.runDelete(attrs.id)
+                      .then(() => {
+                        attrs.removeNote(attrs.id);
+                      })
+                      .catch(() => {
+                        console.log('Could not remove note.');
+                      });
                   },
                 },
                 [

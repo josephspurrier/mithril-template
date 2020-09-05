@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const webpack = require('webpack');
-const { resolve } = require('path');
+const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -12,16 +12,16 @@ const ASSET_PATH = '/';
 const DEV = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-  entry: resolve(__dirname, 'src', 'index.ts'),
+  entry: path.resolve(__dirname, 'src', 'index.ts'),
   plugins: [
     new CleanWebpackPlugin({
       verbose: false,
       cleanStaleWebpackAssets: false,
     }),
     new HtmlWebpackPlugin({
-      filename: resolve(__dirname, 'dist', 'index.html'),
+      filename: path.resolve(__dirname, 'dist', 'index.html'),
       title: 'mithril-template',
-      favicon: resolve(__dirname, 'static', 'favicon.ico'),
+      favicon: path.resolve(__dirname, 'static', 'favicon.ico'),
     }),
     new MiniCssExtractPlugin({
       filename: 'static/[name].[contenthash].css',
@@ -29,11 +29,11 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: resolve(__dirname, 'static', 'healthcheck.html'),
+          from: path.resolve(__dirname, 'static', 'healthcheck.html'),
           to: 'static/',
         },
         {
-          from: resolve(
+          from: path.resolve(
             __dirname,
             '.storybook',
             'static',
@@ -60,12 +60,12 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
     alias: {
-      '@': resolve(__dirname, 'src'),
-      '~': resolve(__dirname),
+      '@': path.resolve(__dirname, 'src'),
+      '~': path.resolve(__dirname),
     },
   },
   output: {
-    path: resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'static/[name].[hash].js',
     sourceMapFilename: 'static/[name].[hash].js.map',
     publicPath: ASSET_PATH,
@@ -77,7 +77,7 @@ module.exports = {
   },
   devtool: DEV ? 'eval-cheap-module-source-map' : 'source-map',
   devServer: {
-    contentBase: resolve(__dirname, 'dist'),
+    contentBase: path.resolve(__dirname, 'dist'),
     historyApiFallback: true,
     hot: true,
     port: 8080,

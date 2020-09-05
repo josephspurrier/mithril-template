@@ -1,30 +1,20 @@
 {
-  //
-  // General settings
-  //
-  "editor.formatOnSave": true,
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  //
-  // ESlint
-  //
-  "eslint.alwaysShowStatus": true,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+  // Define the files types for known files.
+  "files.associations": {
+    "*.prettierrc": "json",
+    "*.stylelintrc": "json",
+    "*.eslintignore": "ignore",
   },
-  "eslint.workingDirectories": [
-    {
-      "mode": "auto"
-    }
-  ],
-  //
-  // File specific settings
-  //
+  // Use the built-in formatter for files like JSON.
+  "editor.formatOnSave": true,
+  // On save, autofix with ESLint and stylelint.
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true,
+  },
+  // Disable the built-in validators.
+  "css.validate": false,
+  "scss.validate": false,
   "[javascript]": {
     "editor.formatOnSave": false
   },
@@ -37,11 +27,35 @@
   "[typescriptreact]": {
     "editor.formatOnSave": false
   },
-  //
-  // File extensions
-  //
-  "files.associations": {
-    "*.prettierrc": "json",
-    "*.stylelintrc": "json"
-  }
+  // Enable stylelint on just CSS and SCSS.
+  //"stylelint.enable": false,
+  "stylelint.validate": [
+    "css",
+    "scss",
+  ],
+  // When importing modules, don't use relative paths, use absolute paths.
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  //"eslint.enable": false,
+  "eslint.alwaysShowStatus": true,
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto",
+    }
+  ],
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+  ],
+  // Disable prettier for languages covered by ESLint.
+  "prettier.disableLanguages": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+  ],
+  //"editor.defaultFormatter": "esbenp.prettier-vscode",
+  //"prettier.enable": false,
 }

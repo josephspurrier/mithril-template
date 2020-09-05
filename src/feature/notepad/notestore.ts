@@ -20,13 +20,22 @@ export interface NoteUpdateRequest {
   message: string;
 }
 
+export interface ErrorResponse {
+  message: string;
+}
+
 export const submit = (n: NoteCreateRequest): Promise<void> => {
   return create(n)
     .then(() => {
       showFlash('Note created.', MessageType.success);
     })
-    .catch((err) => {
-      showFlash(err.response.message, MessageType.warning);
+    .catch((err: XMLHttpRequest) => {
+      const response = err.response as ErrorResponse;
+      if (response) {
+        showFlash(response.message, MessageType.warning);
+      } else {
+        showFlash('An error occurred.', MessageType.warning);
+      }
       throw err;
     });
 };
@@ -59,18 +68,28 @@ export const load = (): Promise<Note[]> => {
       showFlash('Data returned is not valid.', MessageType.failed);
       return [] as Note[];
     })
-    .catch((err) => {
-      showFlash(err.response.message, MessageType.warning);
+    .catch((err: XMLHttpRequest) => {
+      const response = err.response as ErrorResponse;
+      if (response) {
+        showFlash(response.message, MessageType.warning);
+      } else {
+        showFlash('An error occurred.', MessageType.warning);
+      }
       throw err;
     });
 };
 
 export const runUpdate = (id: string, value: string): void => {
-  update(id, value).catch((e) => {
-    showFlash(
-      'Could not update note: ' + e.response.message,
-      MessageType.warning,
-    );
+  update(id, value).catch((err: XMLHttpRequest) => {
+    const response = err.response as ErrorResponse;
+    if (response) {
+      showFlash(
+        `Could not update note: ${response.message}`,
+        MessageType.warning,
+      );
+    } else {
+      showFlash('An error occurred.', MessageType.warning);
+    }
   });
 };
 
@@ -90,11 +109,16 @@ export const runDelete = (id: string): Promise<void> => {
     .then(() => {
       showFlash('Note deleted.', MessageType.success);
     })
-    .catch((err) => {
-      showFlash(
-        'Could not delete: ' + err.response.message,
-        MessageType.warning,
-      );
+    .catch((err: XMLHttpRequest) => {
+      const response = err.response as ErrorResponse;
+      if (response) {
+        showFlash(
+          `Could not delete note: ${response.message}`,
+          MessageType.warning,
+        );
+      } else {
+        showFlash('An error occurred.', MessageType.warning);
+      }
     });
 };
 

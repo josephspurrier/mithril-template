@@ -6,12 +6,17 @@ module.exports = {
     es6: true,
   },
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.json',
+  },
   extends: [
     'eslint:recommended',
-    'plugin:prettier/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:mithril/recommended',
+    'plugin:cypress/recommended',
+    'plugin:prettier/recommended',
   ],
   plugins: ['prettier', '@typescript-eslint'],
   rules: {

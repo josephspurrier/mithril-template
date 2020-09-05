@@ -76,8 +76,8 @@ export const setPrepend = (b: boolean): void => {
   internalFlash.prepend = b;
 };
 
-export const Flash = {
-  view: (): m.Vnode =>
+export const Flash: m.Component = {
+  view: () =>
     m(
       'div',
       {

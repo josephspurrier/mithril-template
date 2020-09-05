@@ -26,21 +26,6 @@
 
 import Path from 'path';
 
-// Must be declared global to be detected by typescript (allows import/export).
-declare global {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
-  namespace Cypress {
-    interface Chainable<Subject> {
-      /**
-       * Reset the database.
-       * @example
-       * cy.resetDB()
-       */
-      resetDB(): Chainable<Window>;
-    }
-  }
-}
-
 Cypress.Commands.add('resetDB', () => {
   return cy
     .exec('echo Custom commands can go here.', {

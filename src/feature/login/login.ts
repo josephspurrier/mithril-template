@@ -34,7 +34,7 @@ export const LoginPage: m.ClosureComponent<Attrs> = ({ attrs }) => {
             alignItems: 'center',
             justifyContent: 'center',
             // TODO: Change this so it's more dynamic via CSS if possible.
-            height: window.innerHeight - (52 + 56) + 'px',
+            height: `${window.innerHeight - (52 + 56)}px`,
             minHeight: '380px',
           },
         },
@@ -58,8 +58,9 @@ export const LoginPage: m.ClosureComponent<Attrs> = ({ attrs }) => {
                       submit(e, user)
                         .then(() => {
                           clear();
-                        }) // eslint-disable-next-line @typescript-eslint/no-empty-function
-                        .catch(() => {});
+                        })
+                        // eslint-disable-next-line @typescript-eslint/no-empty-function, prettier/prettier
+                        .catch(() => { });
                     },
                   },
                   [

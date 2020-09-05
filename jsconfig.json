@@ -5,10 +5,14 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"],
-      "~/*": ["*"]
+      "@/*": [
+        "src/*"
+      ],
+      "~/*": [
+        "*"
+      ]
     },
-    "checkJs": true
+    "checkJs": true,
   },
   "include": [
     "src/**/*",

@@ -94,13 +94,11 @@ describe('test the full application', () => {
   });
 
   it('delete the 1st note', () => {
-    cy.wait(500);
     cy.get('#listTodo>li').eq(1).find('[data-cy=delete-note-link]').click();
     cy.get('#listTodo').find('li').should('have.length', 1);
   });
 
   it('delete the last note', () => {
-    cy.wait(500);
     cy.get('#listTodo>li').eq(0).find('[data-cy=delete-note-link]').click();
     cy.get('#listTodo').find('li').should('have.length', 0);
   });

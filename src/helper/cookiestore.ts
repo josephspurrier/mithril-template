@@ -16,13 +16,15 @@ export const clear = (): void => {
 };
 
 export const bearerToken = (): string => {
-  const auth = Cookie.get(cookieName);
-  if (auth === undefined) {
-    return '';
+  const auth = Cookie.get(cookieName) as string;
+  if (auth) {
+    const at = JSON.parse(auth) as Auth;
+    if (at) {
+      return `Bearer ${at.accessToken}`;
+    }
   }
 
-  const v = JSON.parse(auth);
-  return 'Bearer ' + v.accessToken;
+  return '';
 };
 
 export const isLoggedIn = (): boolean => {

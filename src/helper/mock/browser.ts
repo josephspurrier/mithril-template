@@ -9,6 +9,8 @@ export const setup = (): void => {
   // Enable mock server if set.
   if (Global.mockServer) {
     // Start mocking when the application starts.
-    worker.start();
+    worker.start().catch((err) => {
+      console.log('Error starting the service worker:', err);
+    });
   }
 };

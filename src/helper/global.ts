@@ -17,5 +17,5 @@ export const Global = {
 };
 
 export const apiServer = (): string => {
-  return Global.apiScheme + '://' + Global.apiHost + ':' + Global.apiPort;
+  return `${Global.apiScheme}://${Global.apiHost}:${Global.apiPort}`;
 };

@@ -15,6 +15,10 @@ export interface RegisterResponse {
   record_id: string;
 }
 
+export interface ErrorResponse {
+  message: string;
+}
+
 export const register = (body: User): Promise<void> => {
   return m.request({
     method: 'POST',
@@ -44,7 +48,12 @@ export const submit = (e: InputEvent, u: User): Promise<void> => {
     })
     .catch((err: XMLHttpRequest) => {
       finish();
-      showFlash(err.response.message, MessageType.warning);
+      const response = err.response as ErrorResponse;
+      if (response) {
+        showFlash(response.message, MessageType.warning);
+      } else {
+        showFlash('An error occurred.', MessageType.warning);
+      }
       throw err;
     });
 };
