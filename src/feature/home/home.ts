@@ -18,5 +18,9 @@ export const HomePage: m.ClosureComponent = () => {
 };
 
 const content = [
-  m('p', { class: 'mt-4' }, `Check out your notepad when you get a chance!`),
+  m('p', { class: 'mt-4' }, [
+    'Checkf out your ',
+    m(m.route.Link, { href: '/notepad' }, 'notepad'),
+    ' when you get a chance!',
+  ]),
 ];

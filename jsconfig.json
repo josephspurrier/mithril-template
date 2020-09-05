@@ -18,6 +18,10 @@
     "src/**/*",
     ".storybook/**/*",
     ".cypress/**/*",
-    "node_modules/cypress/**/*"
+    ".*"
+  ],
+  "exclude": [
+    "node_modules",
+    ".storybook/static/mockServiceWorker.js"
   ]
 }

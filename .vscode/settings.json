@@ -7,6 +7,9 @@
   },
   // Use the built-in formatter for files like JSON.
   "editor.formatOnSave": true,
+  // When importing modules, don't use relative paths, use absolute paths.
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
   // On save, autofix with ESLint and stylelint.
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
@@ -28,15 +31,11 @@
     "editor.formatOnSave": false
   },
   // Enable stylelint on just CSS and SCSS.
-  //"stylelint.enable": false,
   "stylelint.validate": [
     "css",
     "scss",
   ],
-  // When importing modules, don't use relative paths, use absolute paths.
-  "javascript.preferences.importModuleSpecifier": "non-relative",
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  //"eslint.enable": false,
+  // Enable ESLint on just JS, JSX, TS, and TSX.
   "eslint.alwaysShowStatus": true,
   "eslint.workingDirectories": [
     {
@@ -49,13 +48,4 @@
     "typescript",
     "typescriptreact",
   ],
-  // Disable prettier for languages covered by ESLint.
-  "prettier.disableLanguages": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-  ],
-  //"editor.defaultFormatter": "esbenp.prettier-vscode",
-  //"prettier.enable": false,
 }

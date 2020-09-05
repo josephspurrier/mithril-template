@@ -8,4 +8,3 @@
 # Skip Storybook generated files.
 .storybook/*-entry.js
 .storybook/static/mockServiceWorker.js
-#.cypress/support/index.d.ts
