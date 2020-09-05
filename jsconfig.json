@@ -15,13 +15,12 @@
     "checkJs": true,
   },
   "include": [
+    "*",
     "src/**/*",
     ".storybook/**/*",
     ".cypress/**/*",
-    ".*"
   ],
   "exclude": [
-    "node_modules",
     ".storybook/static/mockServiceWorker.js"
   ]
 }

@@ -12,15 +12,15 @@ const ASSET_PATH = '/';
 const DEV = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src', 'index3.jsx'),
+  entry: path.resolve(__dirname, 'src', 'index'),
   plugins: [
     new CleanWebpackPlugin({
       verbose: false,
       cleanStaleWebpackAssets: false,
     }),
     new HtmlWebpackPlugin({
-      filename: path.resolve(__dirname, 'dist', 'index.html'),
       title: 'mithril-template',
+      filename: path.resolve(__dirname, 'dist', 'index.html'),
       favicon: path.resolve(__dirname, 'static', 'favicon.ico'),
     }),
     new MiniCssExtractPlugin({

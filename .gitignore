@@ -10,4 +10,4 @@ node_modules/
 dist/
 
 # Screenshots from Cypress.
-screenshots
+.cypress/screenshots
