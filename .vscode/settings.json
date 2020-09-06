@@ -1,9 +1,14 @@
 {
   // Define the files types for known files.
   "files.associations": {
-    "*.prettierrc": "json",
-    "*.stylelintrc": "json",
-    "*.eslintignore": "ignore",
+    ".eslintignore": "ignore",
+    ".eslintrc.json": "jsonc",
+    ".prettierrc": "jsonc",
+    ".stylelintrc": "jsonc",
+    "babel.config.json": "jsonc",
+    "cypress.json": "json", // Does not support comments yet: https://github.com/cypress-io/cypress/issues/5218.
+    "jsconfig.json": "jsonc",
+    "tsconfig.json": "jsonc",
   },
   // Use the built-in formatter for files like JSON.
   "editor.formatOnSave": true,
@@ -15,20 +20,27 @@
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true,
   },
+  // Add newlines to the end of JSON files to align with how package.json behaves when using `npm install`.
+  "[json]": {
+    "files.insertFinalNewline": true,
+  },
+  "[jsonc]": {
+    "files.insertFinalNewline": true,
+  },
   // Disable the built-in validators.
   "css.validate": false,
   "scss.validate": false,
   "[javascript]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
   },
   "[javascriptreact]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
   },
   "[typescript]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
   },
   "[typescriptreact]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
   },
   // Enable stylelint on just CSS and SCSS.
   "stylelint.validate": [
@@ -40,7 +52,7 @@
   "eslint.workingDirectories": [
     {
       "mode": "auto",
-    }
+    },
   ],
   "eslint.probe": [
     "javascript",

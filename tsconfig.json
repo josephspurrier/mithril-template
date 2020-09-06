@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "target": "es5",
     "module": "CommonJS",
@@ -26,7 +27,7 @@
     "*",
     "src/**/*",
     ".storybook/**/*",
-    ".cypress/**/*",
+    ".cypress/**/*"
   ],
   "exclude": [
     ".storybook/static/mockServiceWorker.js"

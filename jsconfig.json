@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/jsconfig",
   "compilerOptions": {
     "target": "es5",
     "module": "CommonJS",
@@ -12,13 +13,13 @@
         "*"
       ]
     },
-    "checkJs": true,
+    "checkJs": true
   },
   "include": [
     "*",
     "src/**/*",
     ".storybook/**/*",
-    ".cypress/**/*",
+    ".cypress/**/*"
   ],
   "exclude": [
     ".storybook/static/mockServiceWorker.js"
