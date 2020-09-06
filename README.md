@@ -54,11 +54,17 @@ npm run cypress
 # Start the Storybook UI.
 npm run storybook
 
-# Lint the code.
+# Lint the js/jsx/ts/tsx code using ESLint/Prettier.
 npm run lint
 
-# Fix the lint issues.
+# Fix the js/jsx/ts/tsx code using ESLint/Prettier.
 npm run lint-fix
+
+# Lint the css/scss code using stylelint.
+npm run stylelint
+
+# Fix the css/scss code using stylelint.
+npm run stylelint-fix
 
 # Generate a new mockServiceWorker.js file when you upgrade msw.
 npx msw init .storybook/static/
@@ -86,9 +92,9 @@ To allow referencing CSS class names in TypeScript, there is a declaration.d.ts 
 
 Cypress provides an easy-to-use end to end testing framework that launches a browser to do testing on your application. It can run from the CLI, or you can open up the UI and watch the tests live. It makes it really easy to debug tests that are not working properly. The config is in the cypress.json file, the support files are in the .cypress/support folder, and the main spec is here: src/e2e.spec.ts.
 
-## ESLint and Prettier
+## ESLint, stylelint, Prettier
 
-ESLint and Prettier will work together to autoformat your code on save and suggest where you can improve your code (.estlintignore, .estlintrc.js, .prettierrc). It will work together with the Visual Studio ESLint extension as well. You will get a notification in VS Code when you first open the project asking if you want to allow the ESLint application to run from the node_modules folder - you should allow it so it can run properly.
+After testing a few combinations of tools, we decided to use the ESLint and stylelint VSCode extensions without using the Prettier VSCode extension. The interesting part is ESLint will still use Prettier to do auto-formatting which is why it's included in the package.json file. ESLint and Prettier will work together to autoformat your code on save and suggest where you can improve your code (.estlintignore, .estlintrc.json, .prettierrc). You will get a notification in VSCode when you first open the project asking if you want to allow the ESLint application to run from the node_modules folder - you should allow it so it can run properly. Stylelint is used for linting and auto-formatting any CSS and SCSS files.
 
 ## Favicon
 
