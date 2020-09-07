@@ -218,7 +218,7 @@ flex.argTypes = {
     control: { type: 'array', separator: ',' },
   },
   flexShrink: {
-    name: 'Child Flex Grow',
+    name: 'Child Flex Shrink',
     control: { type: 'array', separator: ',' },
   },
   flexBasis: {
