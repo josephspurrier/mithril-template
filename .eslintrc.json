@@ -32,7 +32,12 @@
             "error",
             {
                 "patterns": [
-                    "./*"
+                    "./*",
+                    "../*",
+                    "!./*.css", // Allow relative imports for CSS.
+                    "!../*.css", // Allow relative imports for CSS.
+                    "!./*.scss", // Allow relative imports for SCSS.
+                    "!../*.scss" // Allow relative imports for SCSS.
                 ]
             }
         ]
