@@ -4,9 +4,9 @@
     ".eslintignore": "ignore",
     ".eslintrc.json": "jsonc",
     ".prettierrc": "jsonc",
-    ".stylelintrc": "jsonc",
-    "babel.config.json": "jsonc",
-    "cypress.json": "json", // Does not support comments yet: https://github.com/cypress-io/cypress/issues/5218.
+    ".stylelintrc": "json", // Does not support comments in JSON: https://github.com/stylelint/stylelint/issues/982
+    "babel.config.json": "jsonc", // Does not support $schema
+    "cypress.json": "json", // Does not support comments in JSON: https://github.com/cypress-io/cypress/issues/5218.
     "jsconfig.json": "jsonc",
     "tsconfig.json": "jsonc",
   },
