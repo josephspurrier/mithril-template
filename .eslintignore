@@ -9,5 +9,5 @@
 .storybook/*-entry.js
 .storybook/static/mockServiceWorker.js
 
-# Skip dist files.
+# Skip generated files.
 dist
