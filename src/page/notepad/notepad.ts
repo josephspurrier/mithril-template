@@ -1,7 +1,7 @@
 import m from 'mithril';
 import { Breadcrumb } from '@/component/breadcrumb/breadcrumb';
-import * as NoteStore from '@/feature/notepad/notestore';
-import { Note } from '@/feature/notepad/note';
+import * as NoteStore from '@/page/notepad/notestore';
+import { Note } from '@/page/notepad/note';
 
 export const NotepadPage: m.ClosureComponent = () => {
   let list = [] as NoteStore.Note[];

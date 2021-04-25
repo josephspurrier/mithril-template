@@ -1,5 +1,5 @@
 import m from 'mithril';
-import { AboutPage } from '@/feature/about/about';
+import { AboutPage } from '@/page/about/about';
 
 export default {
   title: 'View/About',

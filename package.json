@@ -4,7 +4,7 @@
   "description": "A sample notepad application in Mithril and Bulma.",
   "main": "mithril-template",
   "scripts": {
-    "start": "webpack serve --open",
+    "start": "webpack serve --mode development --open",
     "watch": "webpack --mode development --watch",
     "build": "webpack --mode production",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",

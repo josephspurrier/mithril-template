@@ -1,5 +1,5 @@
 import m from 'mithril';
-import { HomePage } from '@/feature/home/home';
+import { HomePage } from '@/page/home/home';
 
 export default {
   title: 'View/Home',

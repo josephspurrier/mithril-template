@@ -1,19 +1,17 @@
 import m from 'mithril';
-import { RegisterPage } from '@/feature/register/register';
+import { LoginPage } from '@/page/login/login';
 import { Flash } from '@/component/flash/flash';
 import { rest } from 'msw';
 import { worker } from '@/helper/mock/browser';
 import { apiServer } from '@/helper/global';
 
 export default {
-  title: 'View/Register',
-  component: RegisterPage,
+  title: 'View/Login',
+  component: LoginPage,
 };
 
-export const register = (args: {
+export const login = (args: {
   fail: boolean;
-  firstName: string;
-  lastName: string;
   email: string;
   password: string;
 }): m.Component => ({
@@ -22,7 +20,7 @@ export const register = (args: {
 
     worker.use(
       ...[
-        rest.post(apiServer() + '/api/v1/register', (req, res, ctx) => {
+        rest.post(apiServer() + '/api/v1/login', (req, res, ctx) => {
           if (shouldFail) {
             return res(
               ctx.status(400),
@@ -32,10 +30,9 @@ export const register = (args: {
             );
           } else {
             return res(
-              ctx.status(201),
+              ctx.status(200),
               ctx.json({
-                status: 'Created',
-                record_id: '1',
+                status: 'OK',
               }),
             );
           }
@@ -45,26 +42,20 @@ export const register = (args: {
   },
   view: () =>
     m('main', [
-      m(RegisterPage, {
-        firstName: args.firstName,
-        lastName: args.lastName,
+      m(LoginPage, {
         email: args.email,
         password: args.password,
       }),
       m(Flash),
     ]),
 });
-register.args = {
+login.args = {
   fail: false,
-  firstName: 'John',
-  lastName: 'Smith',
   email: 'jsmith@example.com',
   password: 'password',
 };
-register.argTypes = {
+login.argTypes = {
   fail: { name: 'Fail', control: { type: 'boolean' } },
-  firstName: { name: 'First Name', control: { type: 'text' } },
-  lastName: { name: 'Last Name', control: { type: 'text' } },
   email: { name: 'Email', control: { type: 'text' } },
   password: { name: 'Password', control: { type: 'text' } },
 };

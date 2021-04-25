@@ -1,5 +1,5 @@
 import m from 'mithril';
-import { Note } from '@/feature/notepad/note';
+import { Note } from '@/page/notepad/note';
 import { Flash } from '@/component/flash/flash';
 import { rest } from 'msw';
 import { worker } from '@/helper/mock/browser';

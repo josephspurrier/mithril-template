@@ -1,6 +1,6 @@
 import m from 'mithril';
-import { NotepadPage } from '@/feature/notepad/notepad';
-import { Note } from '@/feature/notepad/notestore';
+import { NotepadPage } from '@/page/notepad/notepad';
+import { Note } from '@/page/notepad/notestore';
 import { randId } from '@/helper/random';
 import { Flash } from '@/component/flash/flash';
 import { rest } from 'msw';

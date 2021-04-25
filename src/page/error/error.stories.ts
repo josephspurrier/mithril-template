@@ -1,5 +1,5 @@
 import m from 'mithril';
-import { ErrorPage } from '@/feature/error/error';
+import { ErrorPage } from '@/page/error/error';
 
 export default {
   title: 'View/Error',

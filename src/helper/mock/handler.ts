@@ -1,14 +1,14 @@
 import { rest } from 'msw';
 import { apiServer } from '@/helper/global';
 import { AsyncResponseResolverReturnType, MockedResponse } from 'msw';
-import { User as UserLogin, LoginResponse } from '@/feature/login/loginstore';
-import { RegisterResponse } from '@/feature/register/registerstore';
+import { User as UserLogin, LoginResponse } from '@/page/login/loginstore';
+import { RegisterResponse } from '@/page/register/registerstore';
 import {
   Note,
   NoteListResponse,
   NoteUpdateRequest,
   NoteCreateRequest,
-} from '@/feature/notepad/notestore';
+} from '@/page/notepad/notestore';
 import { randId } from '@/helper/random';
 import { GenericResponse } from '@/helper/response';
 

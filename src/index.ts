@@ -1,12 +1,12 @@
 import m from 'mithril';
 import { MainLayout } from '@/layout/main';
 import { DashboardLayout } from '@/layout/dashboard';
-import { AboutPage } from '@/feature/about/about';
-import { LoginPage } from '@/feature/login/login';
-import { RegisterPage } from '@/feature/register/register';
-import { HomePage } from '@/feature/home/home';
-import { NotepadPage } from '@/feature/notepad/notepad';
-import { ErrorPage } from '@/feature/error/error';
+import { AboutPage } from '@/page/about/about';
+import { LoginPage } from '@/page/login/login';
+import { RegisterPage } from '@/page/register/register';
+import { HomePage } from '@/page/home/home';
+import { NotepadPage } from '@/page/notepad/notepad';
+import { ErrorPage } from '@/page/error/error';
 import { isLoggedIn } from '@/helper/cookiestore';
 import { setup } from '@/helper/mock/browser';
 import '~/node_modules/@fortawesome/fontawesome-free/js/all.js';

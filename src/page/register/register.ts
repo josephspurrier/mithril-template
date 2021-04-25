@@ -1,5 +1,5 @@
 import m from 'mithril';
-import { submit, submitText, User } from '@/feature/register/registerstore';
+import { submit, submitText, User } from '@/page/register/registerstore';
 
 interface Attrs {
   firstName?: string;

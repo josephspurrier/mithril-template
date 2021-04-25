@@ -1,6 +1,6 @@
 import m from 'mithril';
 import { debounce } from '@/helper/debounce';
-import * as NoteStore from '@/feature/notepad/notestore';
+import * as NoteStore from '@/page/notepad/notestore';
 
 interface Attrs {
   id: string;

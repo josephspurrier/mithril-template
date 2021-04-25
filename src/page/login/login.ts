@@ -1,5 +1,5 @@
 import m from 'mithril';
-import { submit, submitText, User } from '@/feature/login/loginstore';
+import { submit, submitText, User } from '@/page/login/loginstore';
 import { Input } from '@/component/input/input';
 
 interface Attrs {
