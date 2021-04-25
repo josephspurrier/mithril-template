@@ -42,7 +42,7 @@
     "js-cookie": "^2.2.1",
     "mini-css-extract-plugin": "^0.11.0",
     "mithril": "^2.0.4",
-    "msw": "^0.20.5",
+    "msw": "^0.28.2",
     "node-sass": "^4.14.1",
     "sass-loader": "^10.0.1",
     "source-map-loader": "^1.1.0",
@@ -72,5 +72,8 @@
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "msw": {
+    "workerDirectory": ".storybook/static"
   }
 }
